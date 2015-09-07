@@ -42,13 +42,7 @@ namespace TinyHttpd
         {
             TinyHttpdServer ths=new TinyHttpdServer(5978);
             ths.Start();
-            //  TinyServerII ts2=new TinyServerII(5978);
-            //IAsyncAction asyncAction = Windows.System.Threading.ThreadPool.RunAsync(
-            //               (workItem) =>
-            //               {
-
-            //                   ths.Start();
-            //               });
+       
 
         }
     }

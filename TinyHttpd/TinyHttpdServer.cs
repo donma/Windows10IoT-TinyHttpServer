@@ -36,6 +36,11 @@ namespace TinyHttpd
                             ProcessRequestAsync(e.Socket);
         }
 
+
+        /// <summary>
+        /// 處理當ConnectionReceived 的時候
+        /// </summary>
+        /// <param name="socket"></param>
         private async void ProcessRequestAsync(StreamSocket socket)
         {
             // this works for text only
@@ -66,6 +71,13 @@ namespace TinyHttpd
             }
         }
 
+        /// <summary>
+        /// 輸出的資料
+        /// </summary>
+        /// <param name="request">http://網址  以後的東西 
+        /// ex. http://1xx.xx.xx.xx/sample.html 則此參數呈現  /sample.html</param>
+        /// <param name="os"></param>
+        /// <returns></returns>
         private async Task WriteResponseAsync(string request, IOutputStream os)
         {
             string file = @"Assets\html" + request.Replace("\\", "/");
@@ -88,6 +100,9 @@ namespace TinyHttpd
                 {
                     contentType = "image/*";
                 }
+
+                //很簡單的處理jpg and html 只是測試，別太講究
+                //Handling MIME and Head roughly.
                 byte[] bodyArray = File.ReadAllBytes(file);
                 MemoryStream stream = new MemoryStream(bodyArray);
                 string header = String.Format("HTTP/1.1 200 OK\r\n" +
