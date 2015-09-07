@@ -109,6 +109,7 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
+    <None Include="README.md" />
     <None Include="TinyHttpd_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
