@@ -98,7 +98,7 @@ namespace TinyHttpd
                     System.IO.Path.GetExtension(file).ToLower() == ".png" ||
                     System.IO.Path.GetExtension(file).ToLower() == ".jpeg")
                 {
-                    contentType = "image/*";
+                    contentType = "image/jpeg";
                 }
 
                 //很簡單的處理jpg and html 只是測試，別太講究
