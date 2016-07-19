@@ -1,6 +1,9 @@
 # Windows10IoT-TinyHttpServer
 ===================
 
+![alt 預覽](https://github.com/donma/Windows10IoT-TinyHttpServer/blob/master/iot10tssample.png?raw=true)
+
+
 很簡單去實作一個Windows 10 上面的Server
 會對應Assets/html/ 的檔案
 
